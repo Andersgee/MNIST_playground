@@ -23,7 +23,7 @@ W1plot=imshow(zeros(sqrt(nrvis)*sqrt(nrhid),sqrt(nrvis)*sqrt(nrhid)),[-1 1]); ax
 subplot(2,2,3);
 W2plot=imshow(zeros(sqrt(nrhid),sqrt(nrhid)*nrout),[-1 1]); axis off; title('W2');
 subplot(2,2,4)
-outputplot=imshow(zeros(10,2),[-1.7 1.7]); axis off;
+outputplot=imshow(zeros(10,2),[-1.7 1.7]); axis off; title('output, target');
 
 %%
 tic
