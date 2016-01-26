@@ -51,7 +51,7 @@ for n=1:60000
     dEdfmapsL3summed=sum(dEdfmapsL3,3);
     for i=1:4
         dEdpmapsL2(:,:,i) = filter2(dEdfmapsL3summed,W2(:,:,i),'full'); %propagate error
-        dEdW2(:,:,i) = filter2(y2,dEdfmapsL3(:,:,i),'valid'); %calculate gradient also
+        dEdW2(:,:,i) = conv2(y2,dEdfmapsL3(:,:,i),'valid'); %calculate gradient also
     end
     dEdfmapsL2=upsample2(dEdpmapsL2);
     for i=1:4
